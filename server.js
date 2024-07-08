@@ -21,7 +21,8 @@ app.get('/', function (req, res) {
     app.use('/person',personRouter);
     app.use('/menu',menuRouter);
 
+//comment added for testing purpose
 
 app.listen(3000,()=>{
     console.log('Server is running on port 3000')
-})//3000 is port
+})//3000 is portgit 
