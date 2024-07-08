@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 //define the mongodb connection URL
-const mongooseURL = 'mongodb://localhost:27017/merahotel';//merahotel is database name
-
+//const mongooseURL = 'mongodb://localhost:27017/merahotel';//merahotel is database name
+const mongoURL = process.env.MONGODB_URL;
+//const mongoURL=process.env.MONGODB_URL_LOCAL;
 //Set up connection
 // mongoose.connect(mongooseURL, { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect(mongooseURL);
+mongoose.connect(mongoURL);
 
 
 //Get the default connection
